@@ -2,7 +2,7 @@ import React, {useState, useEffect } from 'react';
 import './App.css';
 
 function callApi() {
-  fetch(`http://localhost:3001/api/utilisateurs`, { method: 'GET' })
+  fetch(`http://51.222.87.62:3001/api/utilisateurs`, { method: 'GET' })
     .then(data => data.json())
     .then(json => alert(JSON.stringify(json)))
 }
