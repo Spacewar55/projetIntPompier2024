@@ -11,16 +11,16 @@ module.exports = app => {
     // Récupère tout les utilisateurs
     router.get("/", utilisateurs.findAllUser);
   
-    // Retrieve a single Tutorial with id
+    // Récupère un seul utilisateur
     router.get("/:id", utilisateurs.findOneUser);
   
-    // Update a Tutorial with id
+    // Modifie un utilisateur
     router.put("/:id", utilisateurs.updateUser);
   
-    // Delete a Tutorial with id
+    // Supprime un utilisateur
     router.delete("/:id", utilisateurs.deleteUser);
   
-    // Delete all Tutorials
+    // Supprime tout les utilisateurs
     router.delete("/", utilisateurs.deleteAllUser);
   
     app.use('/api/utilisateurs', router);
