@@ -3,11 +3,7 @@ const cors = require('cors');
 
 const app = express();
 
-var corsOptions = {
-    origin: "https://localhost:8081"
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 
@@ -33,7 +29,7 @@ app.get("/", (req, res) => {
 
 require("./app/routes/utilisateur.routes.js")(app);
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Le serveur roule sur le port ${PORT}.`);
 });
